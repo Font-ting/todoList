@@ -32,47 +32,44 @@
 
 <script>
 export default {
-  name:"List",
-  data(){
-    return{
-      countFinishing:0,
-      countFinished:0,
-      listFinished:[],
-      check:false,
+  name: 'List',
+  data () {
+    return {
+      countFinishing: 0,
+      countFinished: 0,
+      listFinished: [],
+      check: false
     }
   },
   props: {
     listFinishing: {
       type: Array,
-      default(){
+      default () {
         return []
       }
     }
   },
-  updated(){
-      this.countFinishing = this.listFinishing.length;
-      this.countFinished = this.listFinished.length;
+  updated () {
+    this.countFinishing = this.listFinishing.length
+    this.countFinished = this.listFinished.length
   },
-  methods:{
-    //复选框点击后
-    handelFinishingChecked(val,index){
-      if(val.target.checked){
-        val.target.checked = false;
-        this.listFinished.push(this.listFinishing.splice(index,1)[0]);
-        this.check = true;
+  methods: {
+    handelFinishingChecked (val, index) {
+      if (val.target.checked) {
+        val.target.checked = false
+        this.listFinished.push(this.listFinishing.splice(index, 1)[0])
+        this.check = true
       }
     },
-    handleFinishingRemoveClick(index){
-      //点击后删除数据
-      this.listFinishing.splice(index,1)
+    handleFinishingRemoveClick (index) {
+      this.listFinishing.splice(index, 1)
     },
-    handelFinishedChecked(val,index){
-        this.listFinishing.push(this.listFinished.splice(index,1)[0]);
+    handelFinishedChecked (val, index) {
+      this.listFinishing.push(this.listFinished.splice(index, 1)[0])
     },
-    handleFinishedRemoveClick(index){
-      this.listFinished.splice(index,1)
+    handleFinishedRemoveClick (index) {
+      this.listFinished.splice(index, 1)
     }
-  
   }
 }
 </script>
@@ -165,5 +162,4 @@ export default {
     font-size: 14px;
     cursor: pointer;
   }
-
 </style>

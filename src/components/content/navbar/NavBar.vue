@@ -10,15 +10,15 @@
 
 <script>
 export default {
-  name: "NavBar",
-  data(){
-    return{
-      taskText:"",
+  name: 'NavBar',
+  data () {
+    return {
+      taskText: ''
     }
   },
-  methods:{
-    handelKeyupEnter(event){
-      this.$emit("handleKeyup",event.target.value)
+  methods: {
+    handelKeyupEnter (event) {
+      this.$emit('handleKeyup', event.target.value)
     }
   }
 }

@@ -11,22 +11,19 @@ import NavBar from '@/components/content/navbar/NavBar'
 import List from '@/components/content/list/List'
 export default {
   name: 'App',
-  data(){
-    return{
-      todoList:[]
+  data () {
+    return {
+      todoList: []
     }
   },
-  components:{
+  components: {
     NavBar,
     List
   },
-  methods:{
-    handleListData(val){
-      this.todoList.push(val);
+  methods: {
+    handleListData (val) {
+      this.todoList.push(val)
     }
-  },
-  mounted(){
-    
   }
 }
 </script>

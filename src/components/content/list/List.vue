@@ -66,6 +66,7 @@ export default {
     },
     handelFinishedChecked (val, index) {
       this.listFinishing.push(this.listFinished.splice(index, 1)[0])
+      val.target.checked = true
     },
     handleFinishedRemoveClick (index) {
       this.listFinished.splice(index, 1)

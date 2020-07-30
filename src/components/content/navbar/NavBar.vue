@@ -19,6 +19,7 @@ export default {
   methods: {
     handelKeyupEnter (event) {
       this.$emit('handleKeyup', event.target.value)
+      event.target.value = ''
     }
   }
 }
